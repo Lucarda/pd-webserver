@@ -1,4 +1,4 @@
-#N canvas 405 106 724 576 12;
+#N canvas 235 38 783 590 12;
 #X obj 69 320 webserver;
 #X msg 160 290 stop;
 #X msg 76 167 start ./example 8080;
@@ -10,21 +10,23 @@
 #X text 19 18 [webserver] -- serve local files to web browsers;
 #X text 217 221 If the folder does not contain a file named "index.html"
 files and folders are listed.;
-#X text 345 520 NOTE: You have to make your computer visible to the
+#X text 395 531 NOTE: You have to make your computer visible to the
 outside with "port-forwarding" on your router., f 50;
-#X text 298 392 other computers on your LAN can browse files with address:
+#X text 345 376 other computers on your LAN can browse files with address:
 http://<your ip>:<port>, f 59;
-#X text 302 481 computers on the internet can browse files with address:
+#X text 352 492 computers on the internet can browse files with address:
 http://<your external ip>:<port>;
-#X text 337 434 NOTE: You must know your ip which is not 127.0.0.1.
+#X text 387 417 NOTE: You must know your ip which is not 127.0.0.1.
 ;
-#X text 386 56 This a simple and easy web server running on other threads.
+#X text 423 45 This a simple and easy web server running on other threads.
 For simplicity it only works on ipv4 and does not support https.,
 f 41;
 #X text 52 423 test it (you might need to refresh your browser):,
 f 28;
 #X text 102 121 <folder> can be an absolute path or relative to the
 patch., f 29;
+#X text 428 439 You can use the "nicinfo" object (find it on Deken)
+to show your network cards ip's., f 45;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 4 0 3 0;
