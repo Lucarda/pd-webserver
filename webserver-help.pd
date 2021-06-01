@@ -1,11 +1,8 @@
 #N canvas 235 38 783 590 12;
 #X obj 69 320 webserver;
 #X msg 160 290 stop;
-#X msg 76 167 start ./example 8080;
 #X obj 57 505 pdcontrol;
-#X msg 58 467 browse http://localhost:8080;
 #X text 78 97 start <folder> <port>;
-#X msg 116 226 start . 8080;
 #X text 162 267 stops the server (takes a couple of seconds).;
 #X text 19 18 [webserver] -- serve local files to web browsers;
 #X text 217 221 If the folder does not contain a file named "index.html"
@@ -27,7 +24,10 @@ f 28;
 patch., f 29;
 #X text 428 439 You can use the "nicinfo" object (find it on Deken)
 to show your network cards ip's., f 45;
+#X msg 76 167 start ./example 8081;
+#X msg 116 226 start . 8081;
+#X msg 58 467 browse http://localhost:8081;
 #X connect 1 0 0 0;
-#X connect 2 0 0 0;
-#X connect 4 0 3 0;
-#X connect 6 0 0 0;
+#X connect 15 0 0 0;
+#X connect 16 0 0 0;
+#X connect 17 0 2 0;
