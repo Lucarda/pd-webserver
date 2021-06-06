@@ -71,6 +71,8 @@ static void webserver_main(t_webserver *x, t_symbol *folder, t_float port) {
 	x->options[3] = nnum;
 
 	x->exitNow = 0;
+	
+	x->started = 1;
 
 	
 	pthread_create(&x->tid, NULL, lmain, x);
@@ -81,7 +83,7 @@ static void webserver_main(t_webserver *x, t_symbol *folder, t_float port) {
 static void webserver_free(t_webserver *x) {
 	
 	x->exitNow = 1;
-
+	(void) pthread_join(&x->tid, NULL);
 	
 }
 

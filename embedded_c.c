@@ -1179,7 +1179,7 @@ lmain(t_webserver *x)
 	}
 	
 	
-	x->started = 1;
+	
 	
 	/* Wait until the server should be closed */
 	while (!x->exitNow) {
