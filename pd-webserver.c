@@ -10,6 +10,9 @@
 #include <string.h>
 #include "inter.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 	
 
@@ -83,6 +86,12 @@ static void webserver_main(t_webserver *x, t_symbol *folder, t_float port) {
 static void webserver_free(t_webserver *x) {
 	
 	x->exitNow = 1;
+	
+#ifdef _WIN32
+		Sleep(1000);
+#else
+		sleep(1);
+#endif
 	(void) pthread_join(&x->tid, NULL);
 	
 }
