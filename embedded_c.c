@@ -1198,7 +1198,7 @@ lmain(t_webserver *x)
 	mg_stop(ctx);
 	logpost(x,2,"Server stopped.");
 	logpost(x,2,"Bye!");
-	x->started = 0;
+	
 
 	pthread_exit(NULL);
 	//return EXIT_SUCCESS;

@@ -87,6 +87,8 @@ static void webserver_free(t_webserver *x) {
 	
 	pthread_join(x->tid, NULL);
 	
+	x->started = 0;
+	
 }
 
 
