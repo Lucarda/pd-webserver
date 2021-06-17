@@ -10,9 +10,7 @@
 #include <string.h>
 #include "inter.h"
 
-#ifdef _WIN32
-#include <windows.h>
-#endif
+
 
 	
 
