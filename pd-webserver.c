@@ -87,12 +87,7 @@ static void webserver_free(t_webserver *x) {
 	
 	x->exitNow = 1;
 	
-#ifdef _WIN32
-		Sleep(1000);
-#else
-		sleep(1);
-#endif
-	(void) pthread_join(&x->tid, NULL);
+	pthread_join(x->tid, NULL);
 	
 }
 
