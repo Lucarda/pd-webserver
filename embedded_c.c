@@ -1200,5 +1200,6 @@ lmain(t_webserver *x)
 	logpost(x,2,"Bye!");
 	x->started = 0;
 
-	return EXIT_SUCCESS;
+	pthread_exit(NULL);
+	//return EXIT_SUCCESS;
 }
