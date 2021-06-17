@@ -1179,7 +1179,7 @@ lmain(t_webserver *x)
 	}
 	
 	
-	x->started = 1;
+	
 	
 	/* Wait until the server should be closed */
 	while (!x->exitNow) {
@@ -1198,7 +1198,8 @@ lmain(t_webserver *x)
 	mg_stop(ctx);
 	logpost(x,2,"Server stopped.");
 	logpost(x,2,"Bye!");
-	x->started = 0;
+	
 
-	return EXIT_SUCCESS;
+	pthread_exit(NULL);
+	//return EXIT_SUCCESS;
 }
